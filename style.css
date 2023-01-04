@@ -1,0 +1,44 @@
+body {
+  font-family: sans-serif;
+}
+.weather {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  margin-top: 100px;
+  padding: 50px;
+  border: 1px blue solid;
+  border-radius: 10px;
+}
+h1 {
+  font-size: 32px;
+}
+p {
+  font-size: 20px;
+  margin-top: 30px;
+}
+h2 {
+  margin-top: 30px;
+}
+.tempNumber {
+  font-size: 40px;
+  font-weight: 600;
+}
+.tempUnit {
+  font-size: 16px;
+  position: relative;
+  top: -18px;
+}
+h4 {
+  font-size: 18px;
+  margin-top: 30px;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.forecast {
+  margin-top: 30px;
+  font-size: 50px;
+}

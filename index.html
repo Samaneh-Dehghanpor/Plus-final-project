@@ -16,17 +16,83 @@
   </head>
   <body>
     <div class="container">
-      <h1>New york</h1>
-      <form action="">
-        <input type="text" placeholder="Search for city" />
-        <button>submit</button>
-      </form>
-      <h3>Today overview</h3>
-      <h2>24 °C | °F</h2>
-      <p>Janaury 4, 2023 11:00 AM</p>
-      <h4>Sky: Clear</h4>
-      <h4>Humidity: 23%</h4>
-      <h4>wind speed: 5 Km/h</h4>
+      <div class="weather">
+        <div class="row">
+          <div class="col-5">
+            <h1>New york</h1>
+          </div>
+          <div class="col-7">
+            <form class="row g-3">
+              <div class="col-auto">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Type a city"
+                />
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <p>Last updated: Janaury 4, 2023 11:00 AM</p>
+        <h2>
+          <span class="tempNumber">24</span>
+          <span class="tempUnit">°C |°F</span>
+        </h2>
+        <div class="row">
+          <div class="col-4">
+            <h4>Sky: Clear</h4>
+          </div>
+          <div class="col-4">
+            <h4>Humidity: 23%</h4>
+          </div>
+          <div class="col-4">
+            <h4>Wind speed: 5 Km/h</h4>
+          </div>
+        </div>
+        <h3>Next 7 days</h3>
+          <div class="row">
+            <div class="col-2">
+              <h5>
+                Sun
+                <div class="tempForecast">27/21</div>
+              </h5>
+            </div>
+            <div class="col-2">
+              <h5>
+                Mon
+                <div class="tempForecast">27/21</div>
+              </h5>
+            </div>
+            <div class="col-2">
+              <h5>
+                Tue
+                <div class="tempForecast">27/21</div>
+              </h5>
+            </div>
+            <div class="col-2">
+              <h5>
+                Wed
+                <div class="tempForecast">27/21</div>
+              </h5>
+            </div>
+            <div class="col-2">
+              <h5>
+                Thu
+                <div class="tempForecast">27/21</div>
+              </h5>
+            </div>
+            <div class="col-2">
+              <h5>
+                Fri
+                <div class="tempForecast">27/21</div>
+              </h5>
+          </div>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
