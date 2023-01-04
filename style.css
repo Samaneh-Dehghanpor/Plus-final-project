@@ -9,8 +9,8 @@ body {
 .weather {
   display: block;
   margin: 0 auto;
-  max-width: 800px;
-  margin-top: 100px;
+  max-width: 900px;
+  margin-top: 50px;
   padding: 50px;
   border-radius: 10px;
   color: #191a49;
@@ -21,8 +21,6 @@ h1 {
 }
 p {
   font-size: 16px;
-  position: relative;
-  left: 18px;
   margin-top: 60px;
   color: #605d5d;
 }
@@ -36,18 +34,21 @@ h2 {
 .tempUnit {
   font-size: 16px;
   position: relative;
-  top: -18px;
+  top: -30px;
 }
 form {
   position: relative;
-  left: 26px;
+  left: -30px;
   bottom: 5px;
 }
+
 h4 {
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 30px;
   margin-bottom: 30px;
+  position: relative;
 }
+
 h3 {
   font-size: 20px;
   font-weight: 600;
@@ -67,4 +68,12 @@ h5 {
   background: #fed058;
   color: #191a49;
   border: none;
+  width: 130%;
+  position: relative;
+  left: 90px;
+}
+.form-control {
+  position: relative;
+  left: 100px;
+  width: 260px;
 }
