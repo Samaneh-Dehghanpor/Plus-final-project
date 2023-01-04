@@ -1,5 +1,10 @@
 body {
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 .weather {
   display: block;
@@ -7,21 +12,25 @@ body {
   max-width: 800px;
   margin-top: 100px;
   padding: 50px;
-  border: 1px blue solid;
   border-radius: 10px;
+  color: #191a49;
+  background: rgba(255, 255, 255, 0.7);
 }
 h1 {
-  font-size: 32px;
+  font-size: 28px;
 }
 p {
-  font-size: 20px;
-  margin-top: 30px;
+  font-size: 16px;
+  position: relative;
+  left: 18px;
+  margin-top: 60px;
+  color: #605d5d;
 }
 h2 {
   margin-top: 30px;
 }
 .tempNumber {
-  font-size: 40px;
+  font-size: 56px;
   font-weight: 600;
 }
 .tempUnit {
@@ -29,16 +38,33 @@ h2 {
   position: relative;
   top: -18px;
 }
+form {
+  position: relative;
+  left: 26px;
+  bottom: 5px;
+}
 h4 {
   font-size: 18px;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 h3 {
   font-size: 20px;
   font-weight: 600;
   margin-top: 30px;
 }
-.forecast {
-  margin-top: 30px;
-  font-size: 50px;
+h5 {
+  margin-top: 15px;
+  font-size: 18px;
+}
+.tempForecast {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 15px;
+  line-height: 30px;
+}
+.btn {
+  background: #fed058;
+  color: #191a49;
+  border: none;
 }
