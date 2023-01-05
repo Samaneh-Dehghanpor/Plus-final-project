@@ -1,26 +1,33 @@
-let now = new Date();
-let monthsList = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
+function showCurrentdate(time) {
+  let now = new Date(time);
+  let monthsList = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
-let month = monthsList[now.getMonth()];
-let date = now.getDate();
-let year = now.getFullYear();
-let hour = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-let time = document.querySelector("#time");
-time.innerHTML = `${date} ${month} ${year}, ${hour}`;
-
+  let month = monthsList[now.getMonth()];
+  let date = now.getDate();
+  let year = now.getFullYear();
+  let hours = now.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${date} ${month} ${year}, ${hours}:${minutes}`;
+}
 function handleSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
@@ -39,6 +46,7 @@ function showCity(result) {
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind-speed");
   let iconElement = document.querySelector("#icon");
+  let currentDate = document.querySelector("#current-date");
   celciusTemp = Math.round(result.data.temperature.current);
 
   cityName.innerHTML = result.data.city;
@@ -46,6 +54,7 @@ function showCity(result) {
   description.innerHTML = result.data.condition.description;
   humidity.innerHTML = result.data.temperature.humidity;
   windSpeed.innerHTML = Math.round(result.data.wind.speed);
+  currentDate.innerHTML = showCurrentdate(result.data.time * 1000);
   iconElement.setAttribute(
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${result.data.condition.icon}.png`
