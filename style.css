@@ -95,3 +95,9 @@ h6 {
   margin: 20px;
   font-weight: bold;
 }
+.skydescription {
+  display: inline-block;
+}
+.skydescription:first-letter {
+  text-transform: uppercase;
+}

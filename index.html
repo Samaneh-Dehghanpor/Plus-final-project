@@ -19,7 +19,7 @@
       <div class="weather">
         <div class="row">
           <div class="col-5">
-            <h1>New york</h1>
+            <h1 id="city-name">New york</h1>
           </div>
           <div class="col-7">
             <form class="row g-3" id="search-form">
@@ -42,19 +42,22 @@
         <div class="row">
           <div class="col-6">
             <h2>
-              <span class="tempNumber">24</span>
+              <img src="" alt="Clear" id="icon" class="float-left" />
+              <span class="tempNumber" id="current-temp">24</span>
               <span class="tempUnit">°C |°F</span>
             </h2>
           </div>
 
           <div class="col-2">
-            <h4>Sky: Clear</h4>
+            <h4>
+              Sky: <span class="skydescription" id="description">Clear</span>
+            </h4>
           </div>
           <div class="col-2">
-            <h4>Humidity: 23%</h4>
+            <h4>Humidity: <span id="humidity">23</span>%</h4>
           </div>
           <div class="col-2">
-            <h4>Wind: 5 Km/h</h4>
+            <h4>Wind: <span id="wind-speed">5</span> km/h</h4>
           </div>
         </div>
         <hr />

@@ -33,7 +33,25 @@ function search(city) {
 }
 function showCity(result) {
   console.log(result.data);
+  let cityName = document.querySelector("#city-name");
+  let currentTemp = document.querySelector("#current-temp");
+  let description = document.querySelector("#description");
+  let humidity = document.querySelector("#humidity");
+  let windSpeed = document.querySelector("#wind-speed");
+  let iconElement = document.querySelector("#icon");
+
+  cityName.innerHTML = result.data.city;
+  currentTemp.innerHTML = Math.round(result.data.temperature.current);
+  description.innerHTML = result.data.condition.description;
+  humidity.innerHTML = result.data.temperature.humidity;
+  windSpeed.innerHTML = Math.round(result.data.wind.speed);
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${result.data.condition.icon}.png`
+  );
 }
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+search("Madrid");
