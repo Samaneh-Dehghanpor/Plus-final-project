@@ -108,6 +108,12 @@ h6 {
   text-align: center;
   margin: 20px;
   font-weight: bold;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  max-width: 500px;
+  padding: 20px;
+  position: relative;
+  left: 275px;
 }
 .skydescription {
   display: inline-block;

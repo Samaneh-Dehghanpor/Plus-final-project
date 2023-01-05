@@ -68,14 +68,6 @@ function showCity(result) {
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind-speed");
   let iconElement = document.querySelector("#icon");
-  let currentDate = document.querySelector("#current-date");
-  let date = new Date(result.data.time * 1000);
-  let day = date.getDate();
-  let month = monthsList[date.getMonth()];
-  let year = date.getFullYear();
-  let hour = ("0" + date.getHours()).substr(-2);
-  let minute = ("0" + date.getMinutes()).substr(-2);
-  celciusTemp = Math.round(result.data.temperature.current);
   let monthsList = [
     "January",
     "February",
@@ -90,6 +82,14 @@ function showCity(result) {
     "November",
     "December",
   ];
+  let currentDate = document.querySelector("#current-date");
+  let date = new Date(result.data.time * 1000);
+  let day = date.getDate();
+  let month = monthsList[date.getMonth()];
+  let year = date.getFullYear();
+  let hour = ("0" + date.getHours()).substr(-2);
+  let minute = ("0" + date.getMinutes()).substr(-2);
+  celciusTemp = Math.round(result.data.temperature.current);
 
   cityName.innerHTML = result.data.city;
   currentTemp.innerHTML = Math.round(result.data.temperature.current);
