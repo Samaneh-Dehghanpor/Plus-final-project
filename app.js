@@ -77,6 +77,4 @@ fahreneit.addEventListener("click", displayFahreniet);
 let celcius = document.querySelector("#celcius");
 celcius.addEventListener("click", displayCelcius);
 
-search("Boston");
-
-/*{ hour: "2-digit", minute: "2-digit" }*/
+search("Lisbon");
