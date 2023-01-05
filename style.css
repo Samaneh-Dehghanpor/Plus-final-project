@@ -101,7 +101,7 @@ h3 {
 .forecast {
   border: 2px #fed058 solid;
   border-radius: 10px;
-  padding: 30px 10px;
+  padding: 30px;
   background: rgba(254, 208, 88, 0.5);
 }
 h6 {
@@ -109,7 +109,7 @@ h6 {
   margin: 20px;
   font-weight: bold;
   background: rgba(255, 255, 255, 0.7);
-  border-radius: 20px;
+  border-radius: 30px;
   max-width: 500px;
   padding: 20px;
   position: relative;

@@ -128,4 +128,4 @@ let fahreneit = document.querySelector("#fahreneit");
 fahreneit.addEventListener("click", displayFahreniet);
 let celcius = document.querySelector("#celcius");
 celcius.addEventListener("click", displayCelcius);
-search("Lisbon");
+search("London");
