@@ -39,6 +39,7 @@ function showCity(result) {
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind-speed");
   let iconElement = document.querySelector("#icon");
+  celciusTemp = Math.round(result.data.temperature.current);
 
   cityName.innerHTML = result.data.city;
   currentTemp.innerHTML = Math.round(result.data.temperature.current);
@@ -50,8 +51,30 @@ function showCity(result) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${result.data.condition.icon}.png`
   );
 }
+function displayFahreniet(event) {
+  event.preventDefault();
+  celcius.classList.remove("active");
+  fahreneit.classList.add("active");
+  let currentTemp = document.querySelector("#current-temp");
+  let fahreneitTemp = (celciusTemp * 9) / 5 + 32;
+  currentTemp.innerHTML = Math.round(fahreneitTemp);
+}
+function displayCelcius(event) {
+  event.preventDefault();
+  celcius.classList.add("active");
+  fahreneit.classList.remove("active");
+  let currentTemp = document.querySelector("#current-temp");
+  currentTemp.innerHTML = celciusTemp;
+}
 
+let celciusTemp = null;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-search("Madrid");
+let fahreneit = document.querySelector("#fahreneit");
+fahreneit.addEventListener("click", displayFahreniet);
+
+let celcius = document.querySelector("#celcius");
+celcius.addEventListener("click", displayCelcius);
+
+search("Boston");

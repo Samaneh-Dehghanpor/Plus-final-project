@@ -101,3 +101,11 @@ h6 {
 .skydescription:first-letter {
   text-transform: uppercase;
 }
+.active {
+  color: #191a49;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+  color: #191a49;
+}
