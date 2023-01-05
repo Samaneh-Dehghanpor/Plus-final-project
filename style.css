@@ -72,6 +72,12 @@ h5 {
   width: 130%;
   position: relative;
   left: 90px;
+  transition: all 200ms ease-in-out;
+}
+.btn:hover {
+  color: #191a49;
+  background: whitesmoke;
+  border: 1px #fed058 solid;
 }
 .form-control {
   position: relative;
